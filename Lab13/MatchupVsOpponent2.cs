@@ -1,9 +1,9 @@
 ﻿using System;
 namespace Lab13
 {
-    public class MatchupVsOpponent2
+    public class MatchupVsOppenent2
     {
-        public static void DecideWinner()
+        public static void DecideWinner(UserPlayer user)
         {
             int userWinTally = 0;
             int computerWinTally = 0;
@@ -13,17 +13,18 @@ namespace Lab13
             {
                 //Rock - 1, Paper - 2, Scissors - 3
 
-                UserPlayer userPlayer = new UserPlayer("");
-                Opponent2 opponent2 = new Opponent2("");
+                Opponent2 opponent2 = new Opponent2("");//Opponent 1 Instance
 
-                int result = (int)userPlayer.GenerateRoshambo();
-                int result2 = (int)opponent2.GenerateRoshambo();
+                int result = (int)user.GenerateRoshambo(); //Returns User's Enum, and casts into an interger
+                int result2 = (int)opponent2.GenerateRoshambo(); //Returns Opponent's 1 Enum (Rock), and casts into an interger
+
+                #region RPS Outcomes
 
                 if (result == 1 && result2 == 2)
                 {
                     Console.Clear();
                     Console.WriteLine("\tPaper covers rock");
-                    Console.WriteLine("\t" + opponent2.Name + " beats " + userPlayer.Name);
+                    Console.WriteLine("\t" + opponent2.Name + " beats " + user.Name);
                     computerWinTally++;
                     Console.WriteLine("\tYou are " + userWinTally + " and " + computerWinTally + " against " + opponent2.Name);
 
@@ -33,7 +34,7 @@ namespace Lab13
                 {
                     Console.Clear();
                     Console.WriteLine("\tRock beats scissors");
-                    Console.WriteLine("\t" + userPlayer.Name + " beats " + opponent2.Name);
+                    Console.WriteLine("\t" + user.Name + " beats " + opponent2.Name);
                     userWinTally++;
                     Console.WriteLine("\tYou are " + userWinTally + " and " + computerWinTally + " against " + opponent2.Name);
 
@@ -51,7 +52,7 @@ namespace Lab13
                 {
                     Console.Clear();
                     Console.WriteLine("\tPaper covers rock");
-                    Console.WriteLine("\t" + userPlayer.Name + " beats " + opponent2.Name);
+                    Console.WriteLine("\t" + user.Name + " beats " + opponent2.Name);
                     userWinTally++;
                     Console.WriteLine("\tYou are " + userWinTally + " and " + computerWinTally + " against " + opponent2.Name);
 
@@ -70,7 +71,7 @@ namespace Lab13
                 {
                     Console.Clear();
                     Console.WriteLine("\tScissors cuts paper");
-                    Console.WriteLine("\t" + opponent2.Name + " beats " + userPlayer.Name);
+                    Console.WriteLine("\t" + opponent2.Name + " beats " + user.Name);
                     computerWinTally++;
                     Console.WriteLine("\tYou are " + userWinTally + " and " + computerWinTally + " against " + opponent2.Name);
 
@@ -80,7 +81,7 @@ namespace Lab13
                 {
                     Console.Clear();
                     Console.WriteLine("\tRock beats scissors");
-                    Console.WriteLine("\t" + opponent2.Name + " beats " + userPlayer.Name);
+                    Console.WriteLine("\t" + opponent2.Name + " beats " + user.Name);
                     computerWinTally++;
                     Console.WriteLine("\tYou are " + userWinTally + " and " + computerWinTally + " against " + opponent2.Name);
 
@@ -90,7 +91,7 @@ namespace Lab13
                 {
                     Console.Clear();
                     Console.WriteLine("\tScissors cuts paper");
-                    Console.WriteLine("\t" + userPlayer.Name + " beats " + opponent2.Name);
+                    Console.WriteLine("\t" + user.Name + " beats " + opponent2.Name);
                     userWinTally++;
                     Console.WriteLine("\tYou are " + userWinTally + " and " + computerWinTally + " against " + opponent2.Name);
 
@@ -103,6 +104,7 @@ namespace Lab13
                     Console.WriteLine("\tDraw");
 
                 }
+                #endregion 
 
                 bool playAgain = Prompts.AskToPlayAgain();
                 if (playAgain == true)
@@ -112,14 +114,11 @@ namespace Lab13
 
                 else
                 {
-                    Console.WriteLine("Coward");
+                    Console.WriteLine("Have a good day!");
                     System.Environment.Exit(1);
                 }
 
             }
-
         }
-
     }
-
 }

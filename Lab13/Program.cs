@@ -2,30 +2,30 @@
 
 namespace Lab13
 {
-    enum Roshambo { Rock = 1, Paper = 2, Scissors = 3 }
+    public enum Roshambo { Rock = 1, Paper = 2, Scissors = 3 }
 
     class Program
     {
         static void Main(string[] args)
         {
-
+            UserPlayer user = new UserPlayer();
             Prompts.SayHello();
-            Prompts.GetUserName();
+            Prompts.GetUserName(user);
+
             bool whichOppenent = RoshamboApp.AskForOppenent();
             if (whichOppenent == true)
             {
 
-                MatchupVsOppenent1.DecideWinner();
+                MatchupVsOpponent1.DecideWinner(user);
             }
                 
             
             else
             {
-                MatchupVsOpponent2.DecideWinner();
+                MatchupVsOppenent2.DecideWinner(user);
             }
                  
         }
-               
-
+   
     }
 }

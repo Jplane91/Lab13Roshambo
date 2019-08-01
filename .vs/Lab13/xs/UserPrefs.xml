@@ -1,22 +1,22 @@
 ﻿<Properties StartupConfiguration="{4C16ECDD-5AAF-404F-AF56-84E088D26DE6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Lab13/Prompts.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lab13/MatchupVsOpponent1.cs">
     <Files>
-      <File FileName="Lab13/Program.cs" Line="28" Column="13" />
-      <File FileName="Lab13/Player.cs" Line="11" Column="1" />
-      <File FileName="Lab13/Matchup.cs" Line="88" Column="1" />
-      <File FileName="Lab13/Opponent2.cs" Line="10" Column="25" />
-      <File FileName="Lab13/Prompts.cs" Line="8" Column="57" />
-      <File FileName="Lab13/UserPlayer.cs" Line="8" Column="1" />
-      <File FileName="Lab13/Opponent1.cs" Line="22" Column="1" />
-      <File FileName="Lab13/MatchupVsOpponent2.cs" Line="41" Column="18" />
-      <File FileName="Lab13/RoshamboApp.cs" Line="29" Column="1" />
+      <File FileName="Lab13/Program.cs" Line="30" Column="6" />
+      <File FileName="Lab13/Player.cs" Line="4" Column="12" />
+      <File FileName="Lab13/UserPlayer.cs" Line="15" Column="1" />
+      <File FileName="Lab13/Opponent1.cs" Line="9" Column="10" />
+      <File FileName="Lab13/Opponent2.cs" Line="33" Column="10" />
+      <File FileName="Lab13/MatchupVsOpponent1.cs" Line="11" Column="30" />
+      <File FileName="Lab13/MatchupVsOpponent2.cs" />
+      <File FileName="Lab13/Prompts.cs" Line="13" Column="10" />
+      <File FileName="Lab13/RoshamboApp.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Lab13" expanded="True">
             <Node name="Lab13" expanded="True">
-              <Node name="Prompts.cs" selected="True" />
+              <Node name="MatchupVsOpponent1.cs" selected="True" />
             </Node>
           </Node>
         </State>

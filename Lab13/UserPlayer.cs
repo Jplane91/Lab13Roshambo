@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Lab13
 {
-    class UserPlayer : Player
+    public class UserPlayer : Player
     {
         public UserPlayer()
         {
@@ -14,6 +14,8 @@ namespace Lab13
             Name = name;
         }
 
+
+        //Get Rock Paper Selection
         public static string ChooseRPS()
         {
             Console.WriteLine("\n\tSelect Rock, Paper, or Scissors");
@@ -21,7 +23,7 @@ namespace Lab13
             return userChoice;
         }
             
-
+        //Return Selection as Enum
         public override Roshambo GenerateRoshambo()
         {
             string userThrow = ChooseRPS();
@@ -40,10 +42,13 @@ namespace Lab13
                 return Roshambo.Scissors;
             }
 
-            else
+            else 
             {
-                return Roshambo.Scissors;
+                Console.WriteLine("Invalid Input");
+                ChooseRPS();
             }
+
+            return Roshambo.Rock;
         }
     }
 }

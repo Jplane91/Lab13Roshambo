@@ -14,8 +14,8 @@ namespace Lab13
 
         public override Roshambo GenerateRoshambo()
         {
-            Random random = new Random();
-            int randomRoshambo = random.Next(1, 4);
+            Random random = new Random();//
+            int randomRoshambo = random.Next(1, 4); //Generates Random Number between 1 and 3
             if (randomRoshambo == 1)
             {
                 return Roshambo.Rock;

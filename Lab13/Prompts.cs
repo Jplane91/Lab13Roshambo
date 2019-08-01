@@ -9,36 +9,12 @@ namespace Lab13
    
         }
 
-        public static void GetUserName()
+        public static void GetUserName(UserPlayer user)
         {
-            UserPlayer user = new UserPlayer("");
             Console.WriteLine("What is your name?\n");
             user.Name = Console.ReadLine();
         }
 
-        //public static bool AskForOppenent()
-        //{
-        //    Console.WriteLine("Which oppenent would you like to play, Levi or Jonathan?");
-        //    string userAnswer = Console.ReadLine().ToLower();
-        //    if (userAnswer == "levi")
-        //    {
-        //        return true;
-        //    }
-
-        //    else if (userAnswer == "jonathan")
-        //    {
-        //        return false;
-        //    }
-
-        //    else
-        //    {
-        //        Console.WriteLine("Invalid input");
-        //        AskForOppenent();
-        //    }
-
-        //    return true;
-
-        //}
 
         public static bool AskToPlayAgain()
         {
@@ -56,7 +32,7 @@ namespace Lab13
 
             else
             {
-                Console.WriteLine("Invalid Respnse");
+                Console.WriteLine("Invalid Response");
                 AskToPlayAgain();
             }
             return true;
